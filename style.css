@@ -1,0 +1,97 @@
+:root{
+    --primary:#d96b2c;
+    --secondary:#4b5936;
+    --tertiary:#3a3a3a;
+    --primary-font: "Kablammo", system-ui;
+}
+
+html,body{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    overflow-x: hidden;
+    
+}
+.logo{
+    position: relative;
+    display: block;
+    justify-content: center;
+    margin:2vw auto;
+    z-index: 1;
+    &:hover{
+        filter: drop-shadow(0 0 0.2rem #000000);
+    }
+}
+.cactus1{
+    position: absolute;
+    height: 50%;
+    z-index: 0;
+    top:50px;
+    filter: drop-shadow(0 0 0.2rem #000000);
+    animation: popup 14s infinite;
+}
+
+.cactus2{
+    position: absolute;
+    height: 80%;
+    z-index: 0;
+    top:0;
+    right:0;
+    filter: drop-shadow(0 0 0.2rem #000000);
+    animation: popup 14s infinite;
+}
+
+.cactus3{
+    position: absolute;
+    height:70%;
+    z-index: 0;
+    top:12vw;
+    left:15vw;
+    filter: drop-shadow(0 0 0.2rem #000000);
+    animation: popup 14s infinite;
+}
+
+.video{
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height:100%;
+    padding: 0;
+    margin:0;
+}
+
+nav{
+    justify-content: center;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: var(--secondary);
+    background: var(--primary);
+    border-radius: 5vw;
+    padding: 1vw;
+    font-family: var(--primary-font);
+    font-size: 2vw;
+    &:hover{
+        color: var(--tertiary);
+        background: var(--primary);
+        filter: drop-shadow(0 0 0.2rem #000000);
+    }
+}
+
+@keyframes popup{
+    0%{
+        transform: translateY(10%);
+        tranform:scale(20%);
+    }
+    50%{
+        transform: scale(50%);
+        transform: rotate(2deg);
+    }
+    100%{
+        transform: scale(50%);
+        transform: rotate(-2deg);
+    }
+}
