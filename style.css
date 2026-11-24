@@ -1,6 +1,6 @@
 :root{
     --primary:#d96b2c;
-    --primary-opacity:#d96b2c77;
+    --primary-opacity:#d96b2ce6;
     --secondary:#4b5936;
     --tertiary:#3a3a3a;
     --primary-font: "Kablammo", system-ui;
@@ -19,9 +19,10 @@ html,body{
 }
 .logo{
     position: relative;
+    width: 35vw;
     display: block;
     justify-content: center;
-    margin:2vw auto;
+    margin:2vw auto 0vw auto ;
     z-index: 1;
     animation: popup 2s;
     &:hover{
@@ -95,6 +96,7 @@ section{
 }
 
 h1{
+    margin:0vw;
     text-align: center;
     text-decoration: none;
     color: var(--secondary);
@@ -102,15 +104,18 @@ h1{
     padding: 1vw;
     font-family: var(--primary-font);
     font-size: 8vw;
+    filter: drop-shadow(0 0 0.2rem #ffffff);
 }
 
 h2{
+    margin:0vw;
     text-align: center;
     text-decoration: none;
     color: var(--tertiary);
     padding: 1vw;
     font-family: var(--primary-font);
     font-size: 5vw;
+    filter: drop-shadow(0 0 0.2rem #ffffff);
 }
 
 h3{
@@ -167,6 +172,7 @@ a{
     margin:1vw;
     font-family: var(--primary-font);
     font-size: 2vw;
+    width: fit-content;
     &:hover{
         color: #ffffff;
         background: var(--primary);
@@ -174,6 +180,37 @@ a{
     }
 
 }
+
+footer {
+    margin: 1vw auto;
+    position: relative;
+    display:block;
+    background: var(--primary-opacity);
+    border-radius:5vw;
+    color:var(--tertiary);
+    width: 70%;
+}
+
+.copyright{
+    color: var(--tertiary);
+    margin-top:2vw;
+    margin-bottom:0vw;
+    padding:1vw;
+    font-family: var(--primary-font);
+    text-align: center;
+    font-size: 2vw;
+        .inline-link{
+            background: var(--secondary);
+            margin:1vw auto;
+            text-decoration: none;
+            color: var(--primary);
+            display: block;
+            &:hover{
+                color: #ffffff;
+            }
+        }
+}
+
 
 @keyframes popup{
     0%{
@@ -218,20 +255,28 @@ a{
         font-size: 5vw;
     }
     a{
-        font-size: 9vw;
+        font-size: 8vw;
     }
     .menu-grid{
     grid-template-columns: repeat(auto-fill, minmax(80%, 1fr));
     }
     .menu-item{
-    img{
-        border-radius:5vw;
-        display: block;
-        margin:4vw auto;
-        width: fit-content;
+        img{
+            border-radius:5vw;
+            display: block;
+            margin:4vw auto;
+            width: fit-content;
+            
+        }
+    }
+    footer{
+        margin-top:40vw;
+        bottom:0;
+        width:90%;
+        .copyright {
+            font-size:5vw;
+        }
         
     }
-
-}
     
 }
