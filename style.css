@@ -74,10 +74,17 @@ html,body{
 }
 
 nav{
+    display: block;
     margin: 5vw;
     justify-content: center;
     text-align: center;
+    z-index: 1;
 }
+nav a.active{
+    color: #ffffff;
+    filter: drop-shadow(0 0 0.2rem #ffffff);
+}
+
 section{
     position: relative;
     margin:2vw auto;
@@ -86,6 +93,7 @@ section{
     width:90%;
     z-index: 1;
 }
+
 h1{
     text-align: center;
     text-decoration: none;
@@ -94,8 +102,8 @@ h1{
     padding: 1vw;
     font-family: var(--primary-font);
     font-size: 8vw;
-
 }
+
 h2{
     text-align: center;
     text-decoration: none;
@@ -103,8 +111,8 @@ h2{
     padding: 1vw;
     font-family: var(--primary-font);
     font-size: 5vw;
-
 }
+
 h3{
     text-align: center;
     text-decoration: none;
@@ -112,8 +120,8 @@ h3{
     padding: 1vw;
     font-family: var(--primary-font);
     font-size: 3vw;
-
 }
+
 p{
     text-align: center;
     text-decoration: none;
@@ -129,6 +137,7 @@ p{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
 }
+
 .menu-item{
     margin: 2vw;
     background:#00000084 ;
@@ -138,6 +147,7 @@ p{
         border-radius:2vw;
         display: block;
         margin:2vw auto;
+        width: fit-content;
         
     }
     &:hover{
@@ -154,16 +164,15 @@ a{
     background: var(--primary);
     border-radius: 5vw;
     padding: 1vw;
+    margin:1vw;
     font-family: var(--primary-font);
     font-size: 2vw;
     &:hover{
-        color: var(--tertiary);
+        color: #ffffff;
         background: var(--primary);
         filter: drop-shadow(0 0 0.2rem #000000);
     }
-    &:active{
-        color: #f3f3f3;
-    }
+
 }
 
 @keyframes popup{
@@ -179,4 +188,50 @@ a{
         transform: scale(50%);
         transform: rotate(-2deg);
     }
+}
+
+@media screen and (max-width: 600px) {
+    .logo{
+        margin-top: 20%;
+        width: 80%;
+    }
+    .cactus1{
+        bottom: 0;
+        width: 50%;
+        z-index: -1;
+    }
+    .cactus2{
+        margin-top: 50vw;
+        width: 70%;
+        z-index: -1;
+    }
+    h1{
+        font-size: 20vw;
+    }
+    h2{
+        font-size: 10vw;
+    }
+    h3{
+        font-size: 9vw;
+    }
+    p{
+        font-size: 5vw;
+    }
+    a{
+        font-size: 9vw;
+    }
+    .menu-grid{
+    grid-template-columns: repeat(auto-fill, minmax(80%, 1fr));
+    }
+    .menu-item{
+    img{
+        border-radius:5vw;
+        display: block;
+        margin:4vw auto;
+        width: fit-content;
+        
+    }
+
+}
+    
 }
