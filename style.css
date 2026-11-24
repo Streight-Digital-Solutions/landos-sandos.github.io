@@ -53,6 +53,15 @@ header{
     &:hover{
         background: #ebeaea;
         filter: drop-shadow(0 0 0.9rem #000000);
+        .mobile-nav{
+            color: var(--secondary);
+            background: #ebeaea;
+            &:hover{
+                a{
+                    color:var(--secondary);
+                }
+            }
+        }
         .icon{
             fill:var(--secondary);
             &:hover{
