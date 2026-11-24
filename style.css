@@ -46,6 +46,10 @@ header{
     height:12vh;
     background: #ebeaea00;
     transition: background 2s;
+    .mobile-nav{
+        background: #ebeaea48;
+        z-index: 2;
+    }
     .icon{
         fill:#ebeaea;
     }
@@ -54,13 +58,8 @@ header{
         background: #ebeaea;
         filter: drop-shadow(0 0 0.9rem #000000);
         .mobile-nav{
-            color: var(--secondary);
             background: #ebeaea;
-            &:hover{
-                a{
-                    color:var(--secondary);
-                }
-            }
+            z-index: 2;
         }
         .icon{
             fill:var(--secondary);
@@ -126,7 +125,7 @@ section{
     background: var(--primary-opacity);
     border-radius: 5vw;
     width:90%;
-    z-index: 0;
+    z-index: -1;
 }
 
 h1{
