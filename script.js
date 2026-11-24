@@ -12,7 +12,7 @@ function displayMenu(){
             background: '#ebeaea', 
             visibility: 'visible', 
             display: 'block', 
-            x:20, 
+            x:20,
             duration:2})
     }
 }
