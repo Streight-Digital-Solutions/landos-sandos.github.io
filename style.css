@@ -3,10 +3,25 @@
     --primary-opacity:#d96b2ce6;
     --secondary:#4b5936;
     --tertiary:#3a3a3a;
-    --primary-font: "Kablammo", system-ui;
+    --primary-font: "Arial", system-ui;
 }
-img{
-    border-radius: 2vw;
+
+.nav-btn{
+    display: none;
+    background: #ebeaea;
+}
+.mobile-nav{
+    height: 100vh;
+    width: 20vh;
+    position: absolute;
+    visibility: hidden;
+    display: none;
+    left: -6vh;
+    top:10.5vh;
+    a{
+        padding: 2vw;
+        line-height: 10vh;
+    }
 }
 
 html,body{
@@ -15,72 +30,76 @@ html,body{
     width:100%;
     height:100%;
     overflow-x: hidden;
-    
 }
+
+.backdrop{
+    position:absolute;
+    top:0;
+    width:100%;
+    z-index:-1;
+}
+
+header{
+    display: flex;
+    width: 100%;
+    height:12vh;
+    background: #ebeaea00;
+    transition: background 2s;
+    .icon{
+        fill:#ebeaea;
+    }
+    
+    &:hover{
+        background: #ebeaea;
+        filter: drop-shadow(0 0 0.9rem #000000);
+        .icon{
+            fill:var(--secondary);
+        }
+        a{
+            &:hover{
+                color: var(--primary);
+            }
+            color: var(--secondary);
+        }
+    }
+}
+
+.icon{
+    height:3vh;
+    width:3vh;
+    margin:2vw;
+    &:hover{
+        fill: var(--primary);
+    }
+}
+.nav-icon{
+    height:3vh;
+    width:3vh;
+    margin:2vw;
+    display: none;
+}
+
 .logo{
     position: relative;
-    width: 35vw;
-    display: block;
-    justify-content: center;
-    margin:2vw auto 0vw auto ;
+    width: 10vh;
+    height: 10vh;
+    display: flex;
+    margin:0.5vw;
     z-index: 1;
     animation: popup 2s;
     &:hover{
         filter: drop-shadow(0 0 0.2rem #000000);
     }
 }
-.cactus1{
-    position: absolute;
-    height: 50%;
-    z-index: 0;
-    top:50px;
-    filter: drop-shadow(0 0 0.2rem #000000);
-    animation: popup 14s infinite;
-    &:hover{
-        filter: drop-shadow(0 0 0.2rem #000000);
-    }
-}
-
-.cactus2{
-    position: absolute;
-    height: 80%;
-    z-index: 0;
-    top:0;
-    right:0;
-    filter: drop-shadow(0 0 0.2rem #000000);
-    animation: popup 14s infinite;
-    &:hover{
-        filter: drop-shadow(0 0 0.2rem #000000);
-    }
-}
-
-.cactus3{
-    position: absolute;
-    height:70%;
-    z-index: 0;
-    top:12vw;
-    left:15vw;
-    filter: drop-shadow(0 0 0.2rem #000000);
-    animation: popup 14s infinite;
-}
-
-.video{
-    object-fit: cover;
-    position: fixed;
-    z-index: -1;
-    width: 100%;
-    height:100%;
-    padding: 0;
-    margin:0;
-}
 
 nav{
-    display: block;
-    margin: 5vw;
+    width: 90%;
+    margin: 2vw;
     justify-content: center;
     text-align: center;
     z-index: 1;
 }
+
 nav a.active{
     color: #ffffff;
     filter: drop-shadow(0 0 0.2rem #ffffff);
@@ -165,30 +184,27 @@ p{
 
 a{
     text-decoration: none;
-    color: var(--secondary);
-    background: var(--primary);
+    color:#ffffff; 
     border-radius: 5vw;
-    padding: 1vw;
+    padding: 0.5vw;
     margin:1vw;
     font-family: var(--primary-font);
-    font-size: 2vw;
+    font-size: 1vw;
     width: fit-content;
     &:hover{
-        color: #ffffff;
-        background: var(--primary);
-        filter: drop-shadow(0 0 0.2rem #000000);
+        color: var(--primary);
     }
-
 }
 
 footer {
-    margin: 1vw auto;
-    position: relative;
+    height:fit-content;
+    position: fixed;
+    bottom:0;
     display:block;
-    background: var(--primary-opacity);
-    border-radius:5vw;
+    background: #ebeaea;
     color:var(--tertiary);
-    width: 70%;
+    width: 100%;
+    filter: drop-shadow(0 0 0.9rem #000000);
 }
 
 .copyright{
@@ -198,15 +214,15 @@ footer {
     padding:1vw;
     font-family: var(--primary-font);
     text-align: center;
-    font-size: 2vw;
+    font-size: 2vh;
         .inline-link{
-            background: var(--secondary);
-            margin:1vw auto;
+            font-size: 2vh;
+            margin:0vw auto;
             text-decoration: none;
             color: var(--primary);
             display: block;
             &:hover{
-                color: #ffffff;
+                color: var(--secondary);
             }
         }
 }
@@ -228,20 +244,29 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
+    .nav-icon{
+        margin:6vw;
+        display: flex;
+    }
+    .nav-btn{
+        display: flex;
+    }
+    .icon{
+        margin:6vw;
+    }
     .logo{
-        margin-top: 20%;
-        width: 80%;
+        width: 10vh;
+        height:10vh;
+        margin:1vh;
+        padding: 0vw 20%;
+        justify-content: center;
     }
-    .cactus1{
-        bottom: 0;
-        width: 50%;
-        z-index: -1;
+    button{
+        border: none;
+        margin:0;
+        padding:0;
     }
-    .cactus2{
-        margin-top: 50vw;
-        width: 70%;
-        z-index: -1;
-    }
+
     h1{
         font-size: 20vw;
     }
@@ -269,14 +294,9 @@ footer {
             
         }
     }
-    footer{
-        margin-top:40vw;
-        bottom:0;
-        width:90%;
-        .copyright {
-            font-size:5vw;
-        }
-        
+
+    nav{
+        display: none;
     }
     
 }

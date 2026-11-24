@@ -26,16 +26,30 @@
         <link rel="canonical" href=""/>
     </head>
     <body>
-        <video class="video" src="assets/videos/backdrop.mp4" autoplay muted loop ></video>
-        <img class="logo" src="assets/images/logo.png"></img>
-        <img class="cactus1" src="assets/images/cactus.svg"></img>
-        <img class="cactus2" src="assets/images/cactus.svg"></img>
-        <!-- <img class="cactus3" src="assets/images/cactus.svg"></img> -->
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="about.html">About</a>
-        </nav>
+        <header>
+            <button class="nav-btn"  onclick="displayMenu();"><svg class="icon" viewBox="1 1 150 100"><path d="M 8.94 0 h 105 c 4.92 0 8.94 4.02 8.94 8.94 l 0 0 c 0 4.92 -4.02 8.94 -8.94 8.94
+                h -105 C 4.02 17.88 0 13.86 0 8.94 l 0 0 C 0 4.02 4.02 0 8.94 0 L 8.94 0 z M 8.94 78.07 h 105 c 4.92 0 8.94 4.02 8.94 8.94 l 0 0 c 0 4.92 -4.02 8.94 -8.94 8.94
+                h -105 C 4.02 95.95 0 91.93 0 87.01 l 0 0 C 0 82.09 4.02 78.07 8.94 78.07 L 8.94 78.07 z M 8.94 39.03 h 105 c 4.92 0 8.94 4.02 8.94 8.94 l 0 0 c 0 4.92 -4.02 8.94 -8.94 8.94
+                h -105 C 4.02 56.91 0 52.89 0 47.97 l 0 0 C 0 43.06 4.02 39.03 8.94 39.03 L 8.94 39.03 z"></path></svg>
+            </button>
+            <nav class="mobile-nav" id="mobile-nav">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About</a>
+            </nav>
+            <img class="logo" src="assets/images/logo.png"></img>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About</a>
+            </nav>
+            <svg class="icon" viewBox="1 1 150 100"><path d="M 4.93 30.34 H 27.41 V 25.76 a 25.77 25.77 0 0 1 51.53 0 v 4.58 H 101.6 a 4.91 4.91 0 0 1 3.47 1.45 h 0 a 4.9 4.9 0 0 1 1.44 3.48
+                v 69.9 a 17.75 17.75 0 0 1 -17.7 17.7 H 17.7 A 17.75 17.75 0 0 1 0 105.18 V 35.28 A 4.91 4.91 0 0 1 1.45 31.8 h 0 a 4.91 4.91 0 0 1 3.47 -1.45
+                Z m 28.76 0 h 39 V 25.76 a 19.49 19.49 0 0 0 -39 0 v 4.58 Z m -6.28 13 V 36.62 H 6.28 v 62 h 94 V 36.62 H 78.94 v 6.76 a 6.48 6.48 0 1 1 -6.28 -.12
+                V 36.62 h -39 v 6.71 a 6.48 6.48 0 1 1 -6.28 0 Z"></path></svg>
+        </header>
+        <img class="backdrop" src="assets/images/backdrop.jpg">
+
         <footer>
             <p class="copyright">© Landos Sandos. All rights reserved.
                 <a class="inline-link" href="privacy.html">Privacy Policy</a>
@@ -50,5 +64,5 @@
     </body>
     <!-- SCRIPTS  -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
-    <script src="script.js" type="text/javascript"></script>
+    <script src="/script.js" type="text/javascript"></script>
 </html>
