@@ -248,8 +248,12 @@ footer {
         margin:6vw;
         display: flex;
     }
+    .backdrop{
+        height:100%;
+    }
     .nav-btn{
         display: flex;
+        background: #00000000;
     }
     .icon{
         margin:6vw;
@@ -262,6 +266,7 @@ footer {
         justify-content: center;
     }
     button{
+        background: #000000;
         border: none;
         margin:0;
         padding:0;
