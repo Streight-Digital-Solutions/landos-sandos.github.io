@@ -54,12 +54,16 @@ header{
         filter: drop-shadow(0 0 0.9rem #000000);
         .icon{
             fill:var(--secondary);
+            &:hover{
+                fill:var(--primary);
+            }
         }
         a{
-            &:hover{
-                color: var(--primary);
-            }
             color: var(--secondary);
+                &:hover{
+                    color: var(--primary);
+                }
+            
         }
     }
 }
@@ -69,7 +73,7 @@ header{
     width:3vh;
     margin:2vw;
     &:hover{
-        fill: var(--primary);
+        fill:#d96b2c
     }
 }
 .nav-icon{
