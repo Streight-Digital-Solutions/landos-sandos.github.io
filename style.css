@@ -1,8 +1,12 @@
 :root{
     --primary:#d96b2c;
+    --primary-opacity:#d96b2c77;
     --secondary:#4b5936;
     --tertiary:#3a3a3a;
     --primary-font: "Kablammo", system-ui;
+}
+img{
+    border-radius: 2vw;
 }
 
 html,body{
@@ -19,6 +23,7 @@ html,body{
     justify-content: center;
     margin:2vw auto;
     z-index: 1;
+    animation: popup 2s;
     &:hover{
         filter: drop-shadow(0 0 0.2rem #000000);
     }
@@ -30,6 +35,9 @@ html,body{
     top:50px;
     filter: drop-shadow(0 0 0.2rem #000000);
     animation: popup 14s infinite;
+    &:hover{
+        filter: drop-shadow(0 0 0.2rem #000000);
+    }
 }
 
 .cactus2{
@@ -40,6 +48,9 @@ html,body{
     right:0;
     filter: drop-shadow(0 0 0.2rem #000000);
     animation: popup 14s infinite;
+    &:hover{
+        filter: drop-shadow(0 0 0.2rem #000000);
+    }
 }
 
 .cactus3{
@@ -63,9 +74,80 @@ html,body{
 }
 
 nav{
+    margin: 5vw;
     justify-content: center;
     text-align: center;
 }
+section{
+    position: relative;
+    margin:2vw auto;
+    background: var(--primary-opacity);
+    border-radius: 5vw;
+    width:90%;
+    z-index: 1;
+}
+h1{
+    text-align: center;
+    text-decoration: none;
+    color: var(--secondary);
+    border-radius: 5vw;
+    padding: 1vw;
+    font-family: var(--primary-font);
+    font-size: 8vw;
+
+}
+h2{
+    text-align: center;
+    text-decoration: none;
+    color: var(--tertiary);
+    padding: 1vw;
+    font-family: var(--primary-font);
+    font-size: 5vw;
+
+}
+h3{
+    text-align: center;
+    text-decoration: none;
+    color: var(--primary);
+    padding: 1vw;
+    font-family: var(--primary-font);
+    font-size: 3vw;
+
+}
+p{
+    text-align: center;
+    text-decoration: none;
+    color: #f3f3f3;
+    border-radius: 5vw;
+    padding:2vw;
+    margin: 2vw;
+    font-family: var(--primary-font);
+    font-size: 2vw;
+}
+
+.menu-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+}
+.menu-item{
+    margin: 2vw;
+    background:#00000084 ;
+    border-radius: 5vw;
+    width: auto;
+    img{
+        border-radius:2vw;
+        display: block;
+        margin:2vw auto;
+        
+    }
+    &:hover{
+        background:var(--primary);
+        h3{
+            color: #000000;
+        }
+    }
+}
+
 a{
     text-decoration: none;
     color: var(--secondary);
@@ -78,6 +160,9 @@ a{
         color: var(--tertiary);
         background: var(--primary);
         filter: drop-shadow(0 0 0.2rem #000000);
+    }
+    &:active{
+        color: #f3f3f3;
     }
 }
 
